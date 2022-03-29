@@ -1,4 +1,6 @@
-# lookup-ip
+# Shodan api
+
+# lookup-ip.py
 
 ## Synopsis
 This script uses the Shodan api to lookup one or more IPs.
