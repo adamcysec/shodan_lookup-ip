@@ -1,6 +1,6 @@
 # lookup-ip
 
-##Synopsis
+## Synopsis
 This script uses the Shodan api to lookup one or more IPs.
 
 ## Description
