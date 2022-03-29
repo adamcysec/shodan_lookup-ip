@@ -23,16 +23,19 @@ You can utilize parameter `--bulk` if you have a paid account.
 - use shodan's builk lookup api
 
 **Example 1**
+
 `py lookup-ip.py -ip "8.8.8.8`
 
 - look up on ip
 
 **Example 2**
+
 `py lookup-ip.py -ip "8.8.8.8, 8.8.4.4`
 
 - look up 2 or more ips in csv format
 
 **Example 3**
+
 `py lookup-ip.py -f ./ips.txt`
 
 - look up all ips in a txt
