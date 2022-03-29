@@ -14,6 +14,7 @@ def get_args():
     )
 
     parser.add_argument('-ip', action='store', type=str, required=False, help="one or more ips to lookup in csv format")
+    parser.add_argument('-b', '--bulk', action='store_true', required=False, help="Use the bulk ip api")
     parser.add_argument('-f', '--file', action='store', type=str, required=False, help="file containing one or more ips per line")
 
     args = parser.parse_args()
@@ -48,6 +49,7 @@ def read_api_key():
 def main():
     args = get_args()
     ip_file_path = args['file']
+    use_bulk = args['bulk']
     
     if ip_file_path:
         ip_lookups = read_ip_file(ip_file_path)
@@ -60,7 +62,10 @@ def main():
     shodanObj = shodan.Shodan(api_key)
     
     # look up ips
-    hosts = lookup_ips(shodanObj, ip_lookups)
+    if use_bulk:
+        hosts = bulk_lookup_ips(shodanObj, ip_lookups)
+    else:
+        hosts = lookup_ips(shodanObj, ip_lookups)
     
     # print shodan url for hosts found in shodan
     for host in hosts:
