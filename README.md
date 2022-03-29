@@ -9,6 +9,7 @@ This script uses the Shodan api to lookup one or more IPs.
 This script looks up one or more ips in Shodan using a free account.
 
 You can utilize parameter `--bulk` if you have a paid account.
+- allows you to query multiple ips within one request
 
 ## Usage
 
