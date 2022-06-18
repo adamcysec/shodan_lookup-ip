@@ -27,13 +27,13 @@ You can utilize parameter `--bulk` if you have a paid account.
 
 **Example 1**
 
-`py lookup-ip.py -ip "8.8.8.8`
+`py lookup-ip.py -ip "8.8.8.8"`
 
 - look up on ip
 
 **Example 2**
 
-`py lookup-ip.py -ip "8.8.8.8, 8.8.4.4`
+`py lookup-ip.py -ip "8.8.8.8, 8.8.4.4"`
 
 - look up 2 or more ips in csv format
 
